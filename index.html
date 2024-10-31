@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="controls">
+    <div class="media-controls">
+      <audio id="audioPlayer" controls>
+        <source src="assets/spotifydown.com - Slipknot.mp3" type="audio/mpeg">
+      </audio>
+      <video id="videoPlayer" width="320" height="240" controls>
+        <source src="assets/video.mp4" type="video/mp4">
+      </video>
+      <div>
+        <button onclick="playMedia('audio')">Воспроизвести аудио</button>
+        <button onclick="pauseMedia('audio')">Пауза</button>
+        <button onclick="volumeUp('audio')">Повысить громкость</button>
+        <button onclick="volumeDown('audio')">Понизить громкость</button>
+      </div>
+      <div>
+        <button onclick="playMedia('video')">Воспроизвести видео</button>
+        <button onclick="pauseMedia('video')">Пауза</button>
+        <button onclick="volumeUp('video')">Повысить громкость</button>
+        <button onclick="volumeDown('video')">Понизить громкость</button>
+      </div>
+    </div>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <div class="animation-controls">
+      <button id="startAnimation">Начать</button>
+      <button id="stopAnimation">Пауза</button>
+      <label for="speed">Скорость:</label>
+      <input type="range" id="speed" name="speed" min="1" max="10" value="2">
+    </div>
+    <input type="file" id="imageLoader" name="imageLoader"/>
+    <img id="img" style="display:none;">
+    <canvas id="imageCanvas" width="500" height="500"></canvas>
+    <div class="image-controls">
+      <label for="contrast">Контрастность:</label>
+      <input type="range" id="contrast" name="contrast" min="0" max="200" value="100">
+      <label for="brightness">Яркость:</label>
+      <input type="range" id="brightness" name="brightness" min="0" max="200" value="100">
+      <button id="saveImage">Сохранить</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
